@@ -2,7 +2,7 @@
 
 <ul class="list-unstyled list-inline text-center filters">
   <li ng-repeat="tag in tags">
-    <button ng-click="tag.set = (tag.set ? false : true)" ng-class="{ 'btn-default': tag.set, 'btn-muma': !tag.set }" class="btn">{{tag.name}}</button>
+    <button ng-click="tag.set = (tag.set ? false : true)" ng-class="{ 'btn-muma': tag.set, 'btn-default': !tag.set }" class="btn">{{tag.name}}</button>
   </li>
 </ul>
 
@@ -16,7 +16,7 @@
     </ul>
   </article>
 
-<nav>
+<!-- <nav>
   <ul class="pagination">
     <li>
       <a ng-click="getShots(page)" ng-repeat="page in pageCount">
@@ -24,6 +24,6 @@
       </a>
     </li>
   </ul>
-</nav>
+</nav> -->
 
 </section>

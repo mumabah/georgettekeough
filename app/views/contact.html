@@ -5,7 +5,6 @@
 		<p ng-show="success">Thanks for getting in touch!</p>
     <p ng-show="error">Something wrong happened!, please try again.</p>
 
-
 	  <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine && submitted }">
 	    <label for="name">NAME</label>
 	    <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" ng-model="input.name" required>
@@ -20,13 +19,9 @@
 
 		<div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine && submitted }">
 			<label for="message">MESSAGE</label>
-			<textarea id="message" name="message" ng-model="contactForm.message" class="form-control" rows="4" placeholder="Your message..." required></textarea>
+			<textarea id="message" name="message" ng-model="input.message" class="form-control" rows="4" placeholder="Your message..." required></textarea>
 		</div>
 
-<!-- 		<div class="form-group">
-			<label for="honeypot">I promise I'm not a bot</label>
-			<input type="text" id="honeypot" name="honeypot" ng-model="input.honeyPot" class="form-control"></input>
-		</div> -->
 	  <button type="submit" name="submit" value="submit" class="btn btn-success" ng-disabled="contactForm.$invalid">Submit</button>
 
 		<p ng-class="result">{{ resultMessage }}</p>

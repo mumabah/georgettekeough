@@ -40,28 +40,56 @@ angular.module('georgettekeoughcomApp')
 });
 
 angular.module('georgettekeoughcomApp')
-  .controller('WorkCtrl', function($rootScope, $scope, $http) {
-  	$scope.shotsData = null;
+  .controller('WorkCtrl', function($rootScope, $scope, $http, $q) {
+  	$scope.shotsData = [];
   	$scope.tags = [];
-  	$scope.pageCount = 1;
-
+  	$scope.pageCount = null;
+  	$scope.getit = [];
 
   	$scope.getShots = function( page ) {
-	  	$http.get('https://api.dribbble.com/v1/user/shots?page=' + page + '&access_token=264fd03cd303e3d9fe7adc107a674611c1d0d328c8bf3a0c4ef024b791676590').
-		  success(function(data) {
-		    $scope.shotsData = data;
-		    $scope.findLink();
 
-		    $scope.buildTags();
-		  }).
-		  error(function() {
-		  	$scope.shotsData = null;
-		  });
+  		for (var i = 1; i <= page.length; i++) {
+  			$scope.getit[i] = $http.get('https://api.dribbble.com/v1/user/shots?page=' + i + '&access_token=264fd03cd303e3d9fe7adc107a674611c1d0d328c8bf3a0c4ef024b791676590');
+  		}
+
+  		$q.all($scope.getit).then(function( data ) {
+			    var allShots = [];
+
+			    angular.forEach( data, function ( elem ) {
+			    	allShots = allShots.concat(elem.data);
+			    });
+
+			    $scope.shotsData = allShots;
+			    $scope.findLink();
+		    	$scope.buildTags();
+
+  		}, function() {
+
+  		});
+
+
+	  	// $http.get('https://api.dribbble.com/v1/user/shots?page=' + page + '&access_token=264fd03cd303e3d9fe7adc107a674611c1d0d328c8bf3a0c4ef024b791676590').
+		  // success(function(data) {
+		  //   $scope.shotsData = data;
+		  //   $scope.findLink();
+
+		  //   $scope.buildTags();
+		  // }).
+		  // error(function() {
+		  // 	$scope.shotsData = null;
+		  // });
 
   	};
 
   	// we want to trigger the getShots function and pass the current page count to it on page load so that it displays the first page automatically
-  	$scope.getShots($scope.pageCount);
+
+  	// watch for the pageCount variable to get loaded
+  	$scope.$watch('pageCount', function() {
+  		if ($scope.pageCount !== null ) {
+  			$scope.getShots($scope.pageCount);
+  		}
+  	});
+
 
   	// watch for the shots_count property that is coming from the user object on the profileCtrl
 	  $rootScope.$watch('profileData', function(args) {
@@ -85,7 +113,7 @@ angular.module('georgettekeoughcomApp')
 	  	}
 
 	  	// return the pageModel array when you call this function
-	  	return pageModel; // this will equal 1, 2, 3
+	  	return pageModel; // this will equal [1, 2, 3]
 
 	  };
 
@@ -125,7 +153,7 @@ angular.module('georgettekeoughcomApp')
 	  		// make a new array called tags and push an object with the name of the current unique tag and a set true which means it is displayed by default
 	  		$scope.tags.push({
 	  			name: tag,
-	  			set: true
+	  			set: false
 	  		});
 	  	});
 
