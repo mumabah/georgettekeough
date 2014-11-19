@@ -1,0 +1,19 @@
+
+header {
+	> section {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+}
+
+.navbar-default {
+	margin-bottom: 0;
+	border-color: transparent;
+	background-color: rgba($color-back-jumbotron, 0.5);
+
+	.navbar-nav > li > a {
+		cursor: pointer;
+	}
+
+}
+

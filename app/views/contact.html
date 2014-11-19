@@ -1,0 +1,51 @@
+<article class="row" ng-controller="contactCtrl">
+	<h2 class="col-xs-12">CONTACT ME</h2>
+
+	<form name="contactForm" role="form" ng-submit="submit(contactForm)" class="col-xs-12 col-sm-8" action="" method="post" novalidate>
+		<p ng-show="success">Thanks for getting in touch!</p>
+    <p ng-show="error">Something wrong happened!, please try again.</p>
+
+
+	  <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine && submitted }">
+	    <label for="name">NAME</label>
+	    <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" ng-model="input.name" required>
+	    <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">You name is required.</p>
+	  </div>
+
+	  <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine && submitted }">
+	    <label for="email">EMAIL</label>
+	    <input type="email" name="email" class="form-control" id="email" placeholder="johndoe@youremail.com" ng-model="input.email">
+	    <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</p>
+	  </div>
+
+		<div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine && submitted }">
+			<label for="message">MESSAGE</label>
+			<textarea id="message" name="message" ng-model="contactForm.message" class="form-control" rows="4" placeholder="Your message..." required></textarea>
+		</div>
+
+<!-- 		<div class="form-group">
+			<label for="honeypot">I promise I'm not a bot</label>
+			<input type="text" id="honeypot" name="honeypot" ng-model="input.honeyPot" class="form-control"></input>
+		</div> -->
+	  <button type="submit" name="submit" value="submit" class="btn btn-success" ng-disabled="contactForm.$invalid">Submit</button>
+
+		<p ng-class="result">{{ resultMessage }}</p>
+
+	</form>
+	<aside class="col-xs-12 col-sm-4 contact-info">
+		<h3>SOCIAL</h3>
+		<ul class="list-unstyled list-inline">
+			<li>
+				<i class="fa fa-facebook"></i>
+			</li>
+			<li>
+				<i class="fa fa-dribbble"></i>
+			</li>
+			<li>
+				<i class="fa fa-linkedin"></i>
+			</li>
+		</ul>
+	</aside>
+</article>
+
+

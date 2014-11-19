@@ -1,0 +1,67 @@
+
+body {
+	color: $color-text;
+	font-family: $font-sans-serif-general;
+}
+
+main.container {
+	padding-top: $height-top-nav;
+}
+
+.jumbotron {
+	background-color: $color-back-jumbotron;
+	margin-top: $height-top-nav;
+
+	h1 {
+		font-style: italic;
+		color: $color-titles;
+	}
+
+}
+
+h1 {
+	font-family: $font-serif-general;
+	color: $color-titles;
+}
+
+h2 {
+	font-family: $font-condensed;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: $font-size-h2;
+}
+
+a,
+.btn {
+	@include transition(background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out);
+}
+
+a {
+	color: $color-primary;
+}
+
+.btn {
+	text-transform: uppercase;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	font-weight: 300;
+}
+
+.btn-muma {
+	background-color: $color-primary;
+	color: $color-inverse-text;
+}
+
+main > section,
+main > * > section {
+	padding-top: $padding-general * 2;
+	padding-bottom: $padding-general * 2;
+}
+
+.list-inline {
+	margin-left: 0;
+}
+
+
+

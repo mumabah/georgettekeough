@@ -1,0 +1,30 @@
+
+#profile {
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), $img-profile-back;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,0.5))), $img-profile-back;
+	background:    -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), $img-profile-back;
+	background:     -o-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), $img-profile-back;
+	background:      -ms-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), $img-profile-back;
+	background:         linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), $img-profile-back;
+
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	color: $color-inverse-text;
+
+	.thumbnail {
+		-webkit-border-radius: $border-radius-circle;
+		-moz-border-radius: $border-radius-circle;
+		border-radius: $border-radius-circle;
+		margin-bottom: 0;
+	}
+
+	h2 {
+		color: $color-inverse-text;
+	}
+}
+
+.profile-info {
+	text-transform: capitalize;
+}
+

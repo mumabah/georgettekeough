@@ -1,0 +1,19 @@
+$icon-font-path: "../../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins";
+
+@import "variables";
+
+
+@import "common";
+@import "nav";
+@import "jumbotron";
+@import "profile";
+@import "work";
+@import "contact";
+@import "modals";
+@import "footer";
