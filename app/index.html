@@ -6,14 +6,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <meta name="google-site-verification" content="WXxGivdHAyag2CI1iENlcKJeACT4QXI9rPBEiLBOL5g" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,600,300,700,800' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,600,300,700,800' rel='stylesheet' type='text/css'>
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -46,7 +46,7 @@
 
       <footer class="footer container-fluid" ng-controller="footerCtrl">
         <section class="row">
-          <p class="col-xs-12 text-center"><span class="glyphicon glyphicon-copyright-mark"></span> Copyright {{date | date:'yyyy'}} <span name-directive>{{profileData.name}}</span>.</p>
+          <p class="col-xs-12 text-center"><span class="glyphicon glyphicon-copyright-mark"></span> {{date | date:'yyyy'}} <span name-directive>{{profileData.name}}</span>. All rights reserved.</p>
         </section>
       </footer>
     </main>

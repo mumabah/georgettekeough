@@ -12,7 +12,7 @@ angular.module('georgettekeoughcomApp')
   	return {
   		restrict: 'EA',
   		templateUrl: 'views/skills.html',
-  		controller: 'skillsCtrl'
+  		controller: 'skills'
   	};
 
 
