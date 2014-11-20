@@ -1,4 +1,5 @@
 
+
 header {
 	> section {
 		padding-bottom: 0;
@@ -6,14 +7,25 @@ header {
 	}
 }
 
+
 .navbar-default {
 	margin-bottom: 0;
 	border-color: transparent;
-	background-color: rgba($color-back-jumbotron, 0.5);
+	background-color: transparent;
 
 	.navbar-nav > li > a {
 		cursor: pointer;
+		text-transform: uppercase;
+		font-family: $font-condensed;
+		font-size: $font-size-large;
+		border-top: 3px solid transparent;
+	}
+
+	.navbar-nav > .active > a,
+	.navbar-nav > .active > a:hover,
+	.navbar-nav > .active > a:focus {
+		border-top: 3px solid $color-primary;
+		background-color: transparent;
 	}
 
 }
-

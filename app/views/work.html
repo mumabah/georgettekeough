@@ -1,13 +1,13 @@
-<section id="work" class="container">
+<section id="work">
 
-<ul class="list-unstyled list-inline text-center filters">
-  <li ng-repeat="tag in tags">
-    <button ng-click="tag.set = (tag.set ? false : true)" ng-class="{ 'btn-muma': tag.set, 'btn-default': !tag.set }" class="btn">{{tag.name}}</button>
+<ul class="nav nav-pills text-center filters">
+  <li ng-repeat="tag in tags" ng-class="{ 'active': tag.set, 'static': !tag.set }">
+    <a ng-click="tag.set = (tag.set ? false : true)">{{tag.name}}</a>
   </li>
 </ul>
 
-  <article class="row">
-    <ul class="list-unstyled list-inline col-xs-12 text-center teasers">
+  <article>
+    <ul class="list-unstyled list-inline text-center teasers">
       <li ng-repeat="shot in shotsData | tagFilter:tags" ng-controller="ModalCtrl">
         <a ng-click="open(shot)" class="clearfix">
           <img src="{{shot.images.teaser}}">

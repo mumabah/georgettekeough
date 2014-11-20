@@ -151,10 +151,23 @@ angular.module('georgettekeoughcomApp')
 	  	// loop through each item on the new unique tag array
 	  	angular.forEach(uniqueTags, function (tag) {
 	  		// make a new array called tags and push an object with the name of the current unique tag and a set true which means it is displayed by default
-	  		$scope.tags.push({
-	  			name: tag,
-	  			set: false
-	  		});
+	  		// $scope.tags.push({
+	  		// 	name: tag,
+	  		// 	set: false
+	  		// });
+
+	  		if ( tag === 'front end' ) {
+	  			$scope.tags.push({
+		  			name: tag,
+		  			set: true
+		  		});
+	  		} else {
+	  			$scope.tags.push({
+		  			name: tag,
+		  			set: false
+		  		});
+	  		}
+
 	  	});
 
 	  };

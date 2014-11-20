@@ -5,9 +5,26 @@
 		margin-bottom: $padding-general * 2;
 	}
 
-	.list-inline.teasers > li {
-		padding-left: 0;
-		padding-right: 0;
+	.nav-pills > li {
+		float: none;
+		display: inline-block;
+		margin-left: $margin-left-work-nav-pills;
+
+		a {
+			text-transform: uppercase;
+			background-color: $color-inverse-text;
+			color: darken($gray-lighter, 20%);
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			border: 1px solid darken($gray-lighter, 10%);
+		}
+
+		&.active a {
+			background-color: $color-primary;
+			color: $color-inverse-text;
+			border-color: $color-primary;
+		}
 	}
 
 	a {

@@ -6,38 +6,40 @@
     <p ng-show="error">Something wrong happened!, please try again.</p>
 
 	  <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine && submitted }">
-	    <label for="name">NAME</label>
-	    <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" ng-model="input.name" required>
+	    <label class="sr-only" for="name">NAME</label>
+	    <input type="text" class="form-control" id="name" name="name" placeholder="NAME" ng-model="input.name" required>
 	    <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">You name is required.</p>
 	  </div>
 
 	  <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine && submitted }">
-	    <label for="email">EMAIL</label>
-	    <input type="email" name="email" class="form-control" id="email" placeholder="johndoe@youremail.com" ng-model="input.email">
+	    <label class="sr-only" for="email">EMAIL</label>
+	    <input type="email" name="email" class="form-control" id="email" placeholder="EMAIL" ng-model="input.email">
 	    <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</p>
 	  </div>
 
 		<div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine && submitted }">
-			<label for="message">MESSAGE</label>
-			<textarea id="message" name="message" ng-model="input.message" class="form-control" rows="4" placeholder="Your message..." required></textarea>
+			<label class="sr-only" for="message">MESSAGE</label>
+			<textarea id="message" name="message" ng-model="input.message" class="form-control" rows="6" placeholder="MESSAGE" required></textarea>
 		</div>
 
-	  <button type="submit" name="submit" value="submit" class="btn btn-success" ng-disabled="contactForm.$invalid">Submit</button>
+	  <div class="form-group text-right">
+	  	<button type="submit" name="submit" value="submit" class="btn btn-lg btn-success" ng-disabled="contactForm.$invalid">Submit</button>
+	  </div>
 
 		<p ng-class="result">{{ resultMessage }}</p>
 
 	</form>
 	<aside class="col-xs-12 col-sm-4 contact-info">
 		<h3>SOCIAL</h3>
-		<ul class="list-unstyled list-inline">
+		<ul class="list-unstyled list-inline social-links">
 			<li>
-				<i class="fa fa-facebook"></i>
+				<a href="#"><i class="fa fa-facebook"></i></a>
 			</li>
 			<li>
-				<i class="fa fa-dribbble"></i>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
 			</li>
 			<li>
-				<i class="fa fa-linkedin"></i>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
 			</li>
 		</ul>
 	</aside>

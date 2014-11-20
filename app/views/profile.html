@@ -1,10 +1,10 @@
 
 <section ng-controller="ProfileCtrl" id="profile">
 	<article class="container">
-		<figure class="col-xs-12 col-sm-3">
+		<figure class="col-xs-12 text-center">
 			<img class="img-circle thumbnail" src="{{profileData.avatar_url}}">
 		</figure>
-		<section class="col-xs-12 col-sm-9 profile-info">
+		<section class="col-xs-12 profile-info text-center">
 			<h2>{{profileData.name}}</h2>
 			<p>
 				<span class="glyphicon glyphicon-map-marker"></span> Current Location: {{profileData.location}}
@@ -12,7 +12,7 @@
 			<!-- <p>
 				<span class="glyphicon glyphicon-globe"></span>	Website: <a target="_blank" href="{{profileData.links.web}}">{{profileData.links.web}}</a>
 			</p> -->
-			<p>{{profileData.shots_count}}</p>
+			<!-- <p>{{profileData.shots_count}}</p> -->
 		</section>
 	</article>
 </section>

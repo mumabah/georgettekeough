@@ -1,6 +1,6 @@
 
 body {
-	color: $color-text;
+	color: $gray-dark;
 	font-family: $font-sans-serif-general;
 }
 
@@ -29,11 +29,18 @@ h2 {
 	font-weight: 300;
 	text-transform: uppercase;
 	font-size: $font-size-h2;
+	color: $gray-light;
 }
 
 a,
 .btn {
-	@include transition(background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out);
+	@include transition(background-color 0.25s ease-in-out, opacity 0.25s ease-in-out, color 0.25s ease-in-out);
+}
+
+.btn,
+.nav-pills > li > a {
+	padding-left: $padding-general;
+	padding-right: $padding-general;
 }
 
 a {
@@ -48,20 +55,27 @@ a {
 	font-weight: 300;
 }
 
-.btn-muma {
-	background-color: $color-primary;
-	color: $color-inverse-text;
+.btn-default {
+	color: darken($gray-lighter, 20%);
 }
 
 main > section,
 main > * > section {
-	padding-top: $padding-general * 2;
-	padding-bottom: $padding-general * 2;
+	padding-top: $padding-general * 4;
+	padding-bottom: $padding-general * 4;
 }
 
 .list-inline {
 	margin-left: 0;
+
+	> li {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 }
+
+
 
 
 

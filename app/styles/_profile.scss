@@ -17,6 +17,7 @@
 		-moz-border-radius: $border-radius-circle;
 		border-radius: $border-radius-circle;
 		margin-bottom: 0;
+		display: inline-block;
 	}
 
 	h2 {
@@ -26,5 +27,12 @@
 
 .profile-info {
 	text-transform: capitalize;
+	padding-top: $padding-general;
 }
+
+
+
+
+
+
 
