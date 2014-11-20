@@ -19,13 +19,47 @@ header {
 		font-family: $font-condensed;
 		font-size: $font-size-large;
 		border-top: 3px solid transparent;
+		padding-top: $padding-general / 2;
+		margin-top: $padding-general / 2;
 	}
 
+
+	.navbar-nav > li > a:hover,
 	.navbar-nav > .active > a,
 	.navbar-nav > .active > a:hover,
 	.navbar-nav > .active > a:focus {
 		border-top: 3px solid $color-primary;
 		background-color: transparent;
+	}
+
+}
+
+
+.social-links {
+
+	> li {
+		padding-left: $padding-general;
+		padding-right: $padding-general;
+	}
+
+	a {
+		display: block;
+		width: $width-social-links;
+		height: $height-social-links;
+		line-height: $height-social-links;
+		text-align: center;
+		font-size: $font-size-h2;
+		-webkit-border-radius: $border-radius-circle;
+		-moz-border-radius: $border-radius-circle;
+		border-radius: $border-radius-circle;
+		background-color: $color-primary;
+		color: $color-inverse-text;
+
+		&:hover {
+			background-color: $color-inverse-text;
+			color: $color-primary;
+		}
+
 	}
 
 }

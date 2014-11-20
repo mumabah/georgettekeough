@@ -1,23 +1,23 @@
 <article class="row" ng-controller="contactCtrl">
 	<h2 class="col-xs-12">CONTACT ME</h2>
 
-	<form name="contactForm" role="form" ng-submit="submit(contactForm)" class="col-xs-12 col-sm-8" action="" method="post" novalidate>
+	<form name="contactForm" role="form" ng-submit="submit(contactForm)" class="col-xs-12" action="" method="post" novalidate>
 		<p ng-show="success">Thanks for getting in touch!</p>
     <p ng-show="error">Something wrong happened!, please try again.</p>
 
-	  <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine && submitted }">
+	  <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine, 'has-success': contactForm.name.$valid }">
 	    <label class="sr-only" for="name">NAME</label>
 	    <input type="text" class="form-control" id="name" name="name" placeholder="NAME" ng-model="input.name" required>
 	    <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">You name is required.</p>
 	  </div>
 
-	  <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine && submitted }">
+	  <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine, 'has-success': contactForm.email.$valid }">
 	    <label class="sr-only" for="email">EMAIL</label>
 	    <input type="email" name="email" class="form-control" id="email" placeholder="EMAIL" ng-model="input.email">
 	    <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</p>
 	  </div>
 
-		<div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine && submitted }">
+		<div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine, 'has-success': contactForm.message.$valid }">
 			<label class="sr-only" for="message">MESSAGE</label>
 			<textarea id="message" name="message" ng-model="input.message" class="form-control" rows="6" placeholder="MESSAGE" required></textarea>
 		</div>
@@ -29,7 +29,7 @@
 		<p ng-class="result">{{ resultMessage }}</p>
 
 	</form>
-	<aside class="col-xs-12 col-sm-4 contact-info">
+	<!-- <aside class="col-xs-12 col-sm-4 contact-info">
 		<h3>SOCIAL</h3>
 		<ul class="list-unstyled list-inline social-links">
 			<li>
@@ -42,7 +42,7 @@
 				<a href="#"><i class="fa fa-linkedin"></i></a>
 			</li>
 		</ul>
-	</aside>
+	</aside> -->
 </article>
 
 

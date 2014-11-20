@@ -11,7 +11,7 @@ angular.module('georgettekeoughcomApp')
   .directive('profile', function() {
   	return {
   		restrict: 'EA',
-  		templateUrl: 'views/profile.html',
+  		templateUrl: 'views/about.html',
   		controller: 'ProfileCtrl'
   	};
 

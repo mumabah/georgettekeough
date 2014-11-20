@@ -1,0 +1,32 @@
+
+<section ng-controller="ProfileCtrl" id="about">
+	<article class="container">
+		<figure class="col-xs-12 text-center">
+			<img class="img-circle thumbnail" src="{{profileData.avatar_url}}">
+		</figure>
+		<section class="col-xs-12 profile-info text-center">
+			<header>
+				<h2>{{profileData.name}}</h2>
+			</header>
+			<h3>
+				<span class="glyphicon glyphicon-map-marker"></span> {{profileData.location}}
+			</h3>
+			<footer class="col-xs-12 contact-info">
+				<!-- <h3>SOCIAL</h3> -->
+				<ul class="list-unstyled list-inline social-links">
+					<li>
+						<a href="#"><i class="fa fa-facebook"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+					</li>
+				</ul>
+		</footer>
+		</section>
+
+	</article>
+</section>
+

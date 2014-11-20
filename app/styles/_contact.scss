@@ -1,32 +1,11 @@
 
 #contact {
-
+	h2 {
+		padding-bottom: $padding-general;
+	}
 }
 
 .contact-info {
 	border-left: 1px solid $gray-light;
-
-}
-
-
-.social-links {
-	a {
-		display: block;
-		width: $width-social-links;
-		height: $height-social-links;
-		line-height: $height-social-links;
-		text-align: center;
-		font-size: $font-size-h4 + 4px;
-		-webkit-border-radius: $border-radius-circle;
-		-moz-border-radius: $border-radius-circle;
-		border-radius: $border-radius-circle;
-		background-color: $color-primary;
-		color: $color-inverse-text;
-
-		&:hover {
-			background-color: $color-inverse-text;
-			color: $color-primary;
-		}
-	}
 
 }

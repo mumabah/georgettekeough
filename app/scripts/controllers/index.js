@@ -14,10 +14,10 @@ angular.module('georgettekeoughcomApp')
   });
 
 
-angular.module('georgettekeoughcomApp')
-	.controller('ScrollCtrl', function($scope, $location, $anchorScroll) {
-   $scope.scrollTo = function(id) {
-      $location.hash(id);
-      $anchorScroll();
-   };
-});
+// angular.module('georgettekeoughcomApp')
+// 	.controller('ScrollCtrl', function($scope, $location, $anchorScroll) {
+//    $scope.scrollTo = function(id) {
+//       $location.hash(id);
+//       $anchorScroll();
+//    };
+// });
