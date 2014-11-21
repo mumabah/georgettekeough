@@ -1,0 +1,12 @@
+<article ng-controller="footerCtrl">
+
+	<section class="row">
+		<p class="col-xs-12 text-center"><span class="glyphicon glyphicon-copyright-mark"></span> {{date | date:'yyyy'}} <span name-directive>{{profileData.name}}</span>. All rights reserved.</p>
+	</section>
+
+	<menu class="spheres">
+		<a scroll-on-click href="#jumbotron" ng-if="backTop" class="back-top">
+			<i class="fa fa-angle-up"></i>
+		</a>
+	</menu>
+</article>

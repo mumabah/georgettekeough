@@ -30,6 +30,8 @@ h2 {
 	text-transform: uppercase;
 	font-size: $font-size-h2;
 	color: $gray-light;
+	padding-bottom: $padding-general;
+	margin-bottom: $padding-general;
 }
 
 .form-control,
@@ -62,7 +64,16 @@ a,
 }
 
 a {
-	color: $color-primary;
+	color: darken($gray-lighter, 20%);
+
+	&:focus,
+	&:hover {
+		color: $gray;
+	}
+
+	&:focus {
+		text-decoration: none;
+	}
 }
 
 .btn {
@@ -109,6 +120,15 @@ main > * > section {
 }
 
 
+.back-top {
+	position: fixed;
+	bottom: $padding-general;
+	right: $padding-general;
 
+	&:hover {
+		color: $color-primary;
+		background-color: $color-inverse-text !important;
+	}
+}
 
 

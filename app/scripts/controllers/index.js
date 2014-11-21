@@ -10,14 +10,24 @@
 angular.module('georgettekeoughcomApp')
   .controller('footerCtrl', function($scope) {
     $scope.date = new Date();
+    $scope.backTop = null;
 
-  });
+    $scope.checkPosition = function() {
+    	$(window).scroll(function() {
+    		$scope.currPosition = document.body.scrollTop;
 
+    	 	if ( $scope.currPosition > 1000 ) {
+    			$scope.backTop = true;
+    			$scope.$apply();
+    		} else {
+    			$scope.backTop = false;
+    			$scope.$apply();
 
-// angular.module('georgettekeoughcomApp')
-// 	.controller('ScrollCtrl', function($scope, $location, $anchorScroll) {
-//    $scope.scrollTo = function(id) {
-//       $location.hash(id);
-//       $anchorScroll();
-//    };
-// });
+    		}
+    	});
+    };
+
+  	$scope.checkPosition();
+
+});
+

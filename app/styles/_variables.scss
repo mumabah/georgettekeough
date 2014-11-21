@@ -1,4 +1,12 @@
 
+// $brand-primary:         #428bca !default;
+// $brand-success:         #5cb85c !default;
+// $brand-info:            #5bc0de !default;
+// $brand-warning:         #f0ad4e !default;
+// $brand-danger:          #d9534f !default;
+
+
+
 // ---------------COLORS---------------
 
 $color-primary: #cd4c4c;
@@ -12,6 +20,7 @@ $width-full: 100%;
 $width-social-links: 80px;
 
 // ---------------HEIGHT---------------
+$height-full: 100%;
 $height-top-nav: 50px;
 $height-social-links: 80px;
 
@@ -41,6 +50,12 @@ $margin-left-work-nav-pills: 10px;
 // ---------------IMAGES---------------
 $img-profile-back: url(../images/profile-back.jpg);
 
+
+// ---------------CUSTOM MIXINS---------------
+@mixin hoverSocial {
+	background-color: transparent;
+	border: 2px solid $color-primary;
+}
 
 
 

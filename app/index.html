@@ -31,7 +31,7 @@
       </header>
 
 
-      <section class="container" ng-include="'views/jumbotron.html'"></section>
+      <section id="jumbotron" class="container" ng-include="'views/jumbotron.html'"></section>
 
       <!-- Custom directive where profile lives -->
       <profile></profile>
@@ -44,11 +44,7 @@
 
       <section id="contact" class="container" ng-include="'views/contact.html'"></section>
 
-      <footer class="footer container-fluid" ng-controller="footerCtrl">
-        <section class="row">
-          <p class="col-xs-12 text-center"><span class="glyphicon glyphicon-copyright-mark"></span> {{date | date:'yyyy'}} <span name-directive>{{profileData.name}}</span>. All rights reserved.</p>
-        </section>
-      </footer>
+      <footer class="footer container-fluid" ng-include="'views/footer.html'"></footer>
     </main>
 
 

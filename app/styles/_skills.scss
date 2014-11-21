@@ -1,0 +1,20 @@
+
+#skills {
+
+	h2 {
+		margin-bottom: $padding-general * 4;
+
+		span {
+			border-bottom: 3px solid $color-primary;
+			padding-bottom: $padding-general;
+		}
+	}
+
+	a {
+		margin-bottom: $padding-general;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}

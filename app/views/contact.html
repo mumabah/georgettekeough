@@ -1,29 +1,38 @@
 <article class="row" ng-controller="contactCtrl">
-	<h2 class="col-xs-12">CONTACT ME</h2>
-
+	<h2 class="col-xs-9">CONTACT ME</h2>
+	<p class="col-xs-3 text-right email-me">
+		<a href="mailto:info@georgettekeough.com">info@georgettekeough.com</a>
+	</p>
 	<form name="contactForm" role="form" ng-submit="submit(contactForm)" class="col-xs-12" action="" method="post" novalidate>
 		<p ng-show="success">Thanks for getting in touch!</p>
     <p ng-show="error">Something wrong happened!, please try again.</p>
 
-	  <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine, 'has-success': contactForm.name.$valid }">
+	  <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine, 'has-success': contactForm.name.$valid && !contactForm.name.$pristine, 'has-feedback': !contactForm.name.$pristine }">
 	    <label class="sr-only" for="name">NAME</label>
 	    <input type="text" class="form-control" id="name" name="name" placeholder="NAME" ng-model="input.name" required>
-	    <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">You name is required.</p>
+	    <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="contactForm.name.$valid && !contactForm.name.$pristine" class="help-block"></span>
+	    <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block"></span>
+	    <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">Name is required.</p>
 	  </div>
 
-	  <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine, 'has-success': contactForm.email.$valid }">
+	  <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine, 'has-success': contactForm.email.$valid && !contactForm.email.$pristine, 'has-feedback': !contactForm.email.$pristine }">
 	    <label class="sr-only" for="email">EMAIL</label>
 	    <input type="email" name="email" class="form-control" id="email" placeholder="EMAIL" ng-model="input.email">
+	    <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="contactForm.email.$valid && !contactForm.email.$pristine" class="help-block"></span>
+	    <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block"></span>
 	    <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter a valid email.</p>
 	  </div>
 
-		<div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine, 'has-success': contactForm.message.$valid }">
+		<div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine, 'has-success': contactForm.message.$valid && !contactForm.message.$pristine, 'has-feedback': !contactForm.message.$pristine }">
 			<label class="sr-only" for="message">MESSAGE</label>
 			<textarea id="message" name="message" ng-model="input.message" class="form-control" rows="6" placeholder="MESSAGE" required></textarea>
+			<span class="glyphicon glyphicon-ok form-control-feedback" ng-show="contactForm.message.$valid && !contactForm.message.$pristine" class="help-block"></span>
+	    <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="contactForm.message.$invalid && !contactForm.message.$pristine" class="help-block"></span>
+			<p ng-show="contactForm.message.$invalid && !contactForm.message.$pristine" class="help-block">Message is required.</p>
 		</div>
 
 	  <div class="form-group text-right">
-	  	<button type="submit" name="submit" value="submit" class="btn btn-lg btn-success" ng-disabled="contactForm.$invalid">Submit</button>
+	  	<button type="submit" name="submit" value="submit" class="btn btn-lg btn-block btn-success" ng-disabled="contactForm.$invalid">Submit</button>
 	  </div>
 
 		<p ng-class="result">{{ resultMessage }}</p>

@@ -7,9 +7,9 @@
  * # Profile
  * Controller of the georgettekeoughcomApp
  */
-angular.module('georgettekeoughcomApp')
-  .controller('skillsCtrl', function($scope, $http) {
+// angular.module('georgettekeoughcomApp')
+//   .controller('skillsCtrl', function($scope, $http) {
 
 
-});
+// });
 

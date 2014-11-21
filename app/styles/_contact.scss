@@ -1,11 +1,12 @@
 
 #contact {
-	h2 {
-		padding-bottom: $padding-general;
-	}
+
 }
 
 .contact-info {
 	border-left: 1px solid $gray-light;
+}
 
+.email-me {
+	padding-top: $padding-general * 2;
 }

@@ -11,6 +11,7 @@ input[type=text] {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+	border-width: 2px;
 }
 
 .form-control:focus,
@@ -33,8 +34,29 @@ input[type]:focus {
 	box-shadow: none;
 }
 
+.has-success .form-control-feedback,
+.has-success .form-control:focus,
+.has-success .form-control {
+	border-color: $brand-success;
+}
+
+.has-error .form-control-feedback,
+.has-error .form-control:focus,
+.has-error .form-control {
+	border-color: $brand-danger;
+}
+
 .form-control {
 	padding-top: $grid-gutter-width / 2;
 	padding-bottom: $grid-gutter-width / 2;
 	height: auto;
 }
+
+.form-control-feedback {
+	top: 0;
+	height: $height-full;
+	line-height: 1;
+	padding-top: $padding-general;
+	padding-bottom: $padding-general;
+}
+

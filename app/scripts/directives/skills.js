@@ -11,8 +11,8 @@ angular.module('georgettekeoughcomApp')
   .directive('skills', function() {
   	return {
   		restrict: 'EA',
-  		templateUrl: 'views/skills.html',
-  		controller: 'skills'
+  		templateUrl: 'views/skills.html'
+  		// controller: 'skills'
   	};
 
 
