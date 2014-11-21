@@ -9,29 +9,55 @@
 }
 
 .continue-btn {
-	display: block;
+	display: inline-block;
 	font-size: $font-size-h1;
 	margin-top: $padding-general;
 
+	&.hover,
 	&:hover {
 		text-decoration: none;
+
+		i:first-of-type {
+			color: #ccc;
+		}
+
+		i:nth-of-type(2) {
+			color: #aaa;
+		}
+
+		i:last-of-type {
+			color: #333;
+		}
+
 	}
 
 	i {
+		color: #eee;
 		display: block;
 		line-height: 0.4;
 	}
 
-	i:nth-of-type {
+	i:first-of-type {
+		@include transition(color 0.25s ease-in-out 0s);
+		// @include animation(first-object 0.5s 1 backwards linear 1.5s);
+	}
+
+	i:nth-of-type(2) {
 		line-height: 0.5;
 		font-size: 115%;
+		@include transition(color 0.55s ease-in-out 0.2s);
+		// @include animation(second-object 1s 1 backwards linear 0.5s);
 	}
 
 	i:last-of-type {
 		font-size: 130%;
+		@include transition(color 0.75s ease-in-out 0.3s);
+		// @include animation(third-object 1.5s 1 backwards linear 1s);
 	}
 }
 
+
+// --------------------MEDIA QUERIES-------------------
 
 @media screen and (max-width: 768px) {
 	.jumbotron {
