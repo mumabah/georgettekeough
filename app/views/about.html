@@ -1,17 +1,17 @@
 
 <section ng-controller="ProfileCtrl" id="about">
 	<article class="container">
-		<figure class="col-xs-12 text-center">
+		<figure class="row text-center">
 			<img class="img-circle thumbnail" src="{{profileData.avatar_url}}">
 		</figure>
-		<section class="col-xs-12 profile-info text-center">
-			<header>
+		<section class="row profile-info text-center">
+			<header class="col-xs-12">
 				<h2>{{profileData.name}}</h2>
 			</header>
-			<h3>
+			<h3 class="col-xs-12">
 				<span class="glyphicon glyphicon-map-marker"></span> {{profileData.location}}
 			</h3>
-			<footer class="col-xs-12">
+			<nav class="col-xs-12">
 				<ul class="list-unstyled list-inline social-links spheres">
 					<li>
 						<a target="_blank" href="https://www.facebook.com/georgettekeough"><i class="fa fa-facebook"></i></a>
@@ -23,7 +23,10 @@
 						<a target="_blank" href="http://www.linkedin.com/in/georgettekeough"><i class="fa fa-linkedin"></i></a>
 					</li>
 				</ul>
-		</footer>
+			</nav>
+			<article class="col-xs-12 col-sm-10 col-sm-offset-1">
+				<h4 class="text-center">I am a designer, a dreamer, a coder, a wanna be genius, an adventurer and a procrastination hater.</h4>
+			</article>
 		</section>
 
 	</article>

@@ -12,6 +12,7 @@ input[type=text] {
 	-moz-box-shadow: none;
 	box-shadow: none;
 	border-width: 2px;
+	background-color: darken($color-inverse-text, 5%);
 }
 
 .form-control:focus,

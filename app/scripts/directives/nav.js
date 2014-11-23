@@ -21,6 +21,11 @@ angular.module('georgettekeoughcomApp')
           $target = $elm;
         }
         angular.element('body').animate({scrollTop: $target.offset().top - 50 + 'px'}, 'slow');
+
+        if ( $elm.parents('.navbar-collapse').hasClass('in') ) {
+          $elm.parents('.navbar-collapse').removeClass('in');
+        }
+
       });
     }
   };

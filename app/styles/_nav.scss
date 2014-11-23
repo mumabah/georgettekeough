@@ -7,11 +7,11 @@ header {
 	}
 }
 
-
 .navbar-default {
 	margin-bottom: 0;
 	border-color: transparent;
 	background-color: transparent;
+	background-color: $color-back-navbar-header;
 
 	.navbar-nav > li > a {
 		cursor: pointer;
@@ -23,13 +23,24 @@ header {
 		margin-top: $padding-general / 2;
 	}
 
+	.navbar-toggle {
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		background-color: $color-primary;
 
-	.navbar-nav > li > a:hover,
-	.navbar-nav > .active > a,
-	.navbar-nav > .active > a:hover,
-	.navbar-nav > .active > a:focus {
-		border-top: 3px solid $color-primary;
-		background-color: transparent;
+		.icon-bar {
+			background-color: $color-inverse-text;
+		}
+
+		&:focus,
+		&:hover {
+			background-color: $color-primary;
+
+			.icon-bar {
+				background-color: $color-inverse-text;
+			}
+		}
 	}
 
 }
@@ -63,6 +74,41 @@ header {
 
 }
 
-.social-links {
+
+.navbar-collapse {
+	background-color: $gray-lighter;
+	@include box-shadow( 0 2px 3px 0px rgba(0, 0, 0, 0.2) );
+
+	.navbar-nav {
+		margin-top: 0;
+	}
 
 }
+
+
+
+// --------------------MEDIA QUERIES-------------------
+
+@media screen and (min-width: 768px) {
+	.navbar-default {
+
+		.navbar-nav > li > a:hover,
+		.navbar-nav > .active > a,
+		.navbar-nav > .active > a:hover,
+		.navbar-nav > .active > a:focus {
+			border-top: 3px solid $color-primary;
+			background-color: transparent;
+		}
+
+	}
+
+	.navbar-collapse {
+		background-color: transparent;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+
+	}
+
+}
+

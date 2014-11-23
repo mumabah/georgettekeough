@@ -30,9 +30,31 @@
 	a {
 		display: inline-block;
 		cursor: pointer;
+		position: relative;
 
-		&:hover {
-			opacity: 0.5;
-		}
+		// &:hover {
+		// 	opacity: 0.5;
+		// }
 	}
 }
+
+.teasers {
+
+	li > a:after {
+		content: 'x';
+		display: block;
+		position: absolute;
+		width: $width-full;
+		height: 0;
+		top: 0;
+		left: 0;
+		background-color: $color-primary;
+		color: $color-inverse-text;
+	}
+
+	li > a:hover:after {
+		height: $height-full;
+	}
+
+}
+

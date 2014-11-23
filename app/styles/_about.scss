@@ -22,16 +22,22 @@
 
 	h2 {
 		color: $gray-light;
+		padding-bottom: 0;
+	}
+
+	h3 {
+		margin-top: 0;
 	}
 }
 
 .profile-info {
-	text-transform: capitalize;
 	padding-top: $padding-general;
 }
 
 .social-links {
 	padding-top: $padding-general * 2;
+	padding-bottom: $padding-general * 2;
+	margin-bottom: 0;
 }
 
 

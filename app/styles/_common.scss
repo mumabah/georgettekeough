@@ -1,22 +1,12 @@
 
 body {
-	color: $gray-dark;
+	color: $gray;
 	font-family: $font-sans-serif-general;
+	line-height: 1.3;
 }
 
 main.container {
 	padding-top: $height-top-nav;
-}
-
-.jumbotron {
-	background-color: $color-back-jumbotron;
-	margin-top: $height-top-nav;
-
-	h1 {
-		font-style: italic;
-		color: $gray;
-	}
-
 }
 
 h1 {
@@ -30,8 +20,14 @@ h2 {
 	text-transform: uppercase;
 	font-size: $font-size-h2;
 	color: $gray-light;
-	padding-bottom: $padding-general;
-	margin-bottom: $padding-general;
+}
+
+h4 {
+	line-height: 1.4;
+}
+
+h5 {
+	text-transform: uppercase;
 }
 
 .form-control,
@@ -119,7 +115,6 @@ main > * > section {
 
 }
 
-
 .back-top {
 	position: fixed;
 	bottom: $padding-general;
@@ -132,3 +127,20 @@ main > * > section {
 }
 
 
+// --------------------MEDIA QUERIES-------------------
+
+@media screen and (min-width: 768px) {
+
+	h2 {
+		padding-bottom: $padding-general;
+		margin-bottom: $padding-general;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.spheres a.back-top {
+		width: $width-social-links / 2;
+		height: $height-social-links / 2;
+		line-height: ($height-social-links / 2) - 15;
+	}
+}

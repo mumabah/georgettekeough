@@ -125,6 +125,8 @@ angular.module('georgettekeoughcomApp')
 	  			var sliiptArr = shot.description.split('f="');
 					$scope.shotsData[index].webLink = sliiptArr[1].split('"')[0];
 	  		}
+	  		// strip the description from html tags and return
+  			shot.description = shot.description.replace(/(<([^>]+)>)/ig,'');
 
 	  	});
 

@@ -1,6 +1,14 @@
 
+
 .jumbotron {
 	padding-top: 0;
+	background-color: $color-back-jumbotron;
+	margin-top: $height-top-nav;
+
+	h1 {
+		font-style: italic;
+		color: $gray;
+	}
 
 	button {
 		margin-top: $padding-general * 3;
@@ -39,20 +47,17 @@
 
 	i:first-of-type {
 		@include transition(color 0.25s ease-in-out 0s);
-		// @include animation(first-object 0.5s 1 backwards linear 1.5s);
 	}
 
 	i:nth-of-type(2) {
 		line-height: 0.5;
 		font-size: 115%;
 		@include transition(color 0.55s ease-in-out 0.2s);
-		// @include animation(second-object 1s 1 backwards linear 0.5s);
 	}
 
 	i:last-of-type {
 		font-size: 130%;
 		@include transition(color 0.75s ease-in-out 0.3s);
-		// @include animation(third-object 1.5s 1 backwards linear 1s);
 	}
 }
 
@@ -60,9 +65,14 @@
 // --------------------MEDIA QUERIES-------------------
 
 @media screen and (max-width: 768px) {
+	#jumbotron {
+		padding-bottom: $padding-general;
+	}
+
 	.jumbotron {
 		margin-top: 0;
 	}
+
 }
 
 @media screen and (min-width: 768px) {
