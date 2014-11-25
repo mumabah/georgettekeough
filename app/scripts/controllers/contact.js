@@ -33,11 +33,11 @@ angular.module('georgettekeoughcomApp')
           if ( data.success ) {
             $scope.submitButtonDisabled = true;
             $scope.resultMessage = data.message;
-            $scope.result = 'bg-success';
+            $scope.result = 'alert alert-success';
           } else {
             $scope.submitButtonDisabled = false;
             $scope.resultMessage = data.message;
-            $scope.result = 'bg-danger';
+            $scope.result = 'alert alert-danger';
           }
 
         });

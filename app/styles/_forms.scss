@@ -35,17 +35,41 @@ input[type]:focus {
 	box-shadow: none;
 }
 
-.has-success .form-control-feedback,
-.has-success .form-control:focus,
-.has-success .form-control {
-	border-color: $brand-success;
+
+.has-success {
+
+	.form-control-feedback,
+	.form-control:focus,
+	.form-control {
+		border-color: $brand-success;
+	}
+
+	.form-control-feedback {
+		color: $brand-success;
+	}
+
 }
 
-.has-error .form-control-feedback,
-.has-error .form-control:focus,
-.has-error .form-control {
-	border-color: $brand-danger;
+.has-error {
+
+	.help-block,
+	.control-label,
+	.radio,
+	.checkbox,
+	.radio-inline,
+	.checkbox-inline,
+	.form-control-feedback {
+		color: $brand-danger;
+	}
+
+	.form-control-feedback,
+	.form-control:focus,
+	.form-control {
+		border-color: $brand-danger;
+	}
+
 }
+
 
 .form-control {
 	padding-top: $grid-gutter-width / 2;

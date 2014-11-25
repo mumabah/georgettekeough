@@ -29,7 +29,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
         exit;
     }
 
-    $data = array('success' => true, 'message' => 'Thanks! We have received your message.');
+    $data = array('success' => true, 'message' => 'Thanks for contacting me! I will get in touch with you shortly.');
     echo json_encode($data);
 
 } else {

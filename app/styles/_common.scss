@@ -18,8 +18,12 @@ h2 {
 	letter-spacing: 3px;
 	font-weight: 300;
 	text-transform: uppercase;
-	font-size: $font-size-h2;
+	font-size: $font-size-large;
 	color: $gray-light;
+}
+
+h3, .h3 {
+
 }
 
 h4 {
@@ -28,6 +32,16 @@ h4 {
 
 h5 {
 	text-transform: uppercase;
+}
+
+h6 {
+	font-family: $font-sans-serif-general;
+	font-size: $font-size-large;
+	// text-transform: uppercase;
+	color: lighten($gray-light, 20%);
+	font-weight: 100;
+	margin-top: $padding-general;
+	letter-spacing: 2px;
 }
 
 .form-control,
@@ -78,6 +92,8 @@ a {
 	-moz-border-radius: 0;
 	border-radius: 0;
 	font-weight: 300;
+	letter-spacing: 1px;
+	// font-family: $font-condensed;
 }
 
 .btn-default {
@@ -134,7 +150,9 @@ main > * > section {
 	h2 {
 		padding-bottom: $padding-general;
 		margin-bottom: $padding-general;
+		font-size: $font-size-h2;
 	}
+
 }
 
 @media screen and (max-width: 768px) {

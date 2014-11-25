@@ -7,8 +7,10 @@
 
 	.nav-pills > li {
 		float: none;
-		display: inline-block;
-		margin-left: $margin-left-work-nav-pills;
+
+		&:first-of-type a {
+			border-top-width: 1px;
+		}
 
 		a {
 			text-transform: uppercase;
@@ -18,43 +20,86 @@
 			-moz-border-radius: 0;
 			border-radius: 0;
 			border: 1px solid darken($gray-lighter, 10%);
+			cursor: pointer;
+			border-top-width: 0;
+			@include transition(background-color 0.3s ease-in-out);
+
+			&:hover {
+				background-color: darken($color-inverse-text, 10%);
+			}
 		}
 
 		&.active a {
 			background-color: $color-primary;
 			color: $color-inverse-text;
 			border-color: $color-primary;
+
+			&:hover {
+				background-color: darken($color-primary, 10%);
+			}
 		}
+	}
+
+}
+
+.teasers {
+
+	li {
+		display: inline-flex;
 	}
 
 	a {
 		display: inline-block;
 		cursor: pointer;
 		position: relative;
-
-		// &:hover {
-		// 	opacity: 0.5;
-		// }
+		overflow: hidden;
 	}
-}
-
-.teasers {
 
 	li > a:after {
-		content: 'x';
+		content: '\f065';
+		font-family: 'fontAwesome';
 		display: block;
 		position: absolute;
 		width: $width-full;
-		height: 0;
-		top: 0;
+		height: $height-full;
+		top: -($height-teasers);
 		left: 0;
-		background-color: $color-primary;
+		background-color: rgba($color-primary, 0.5);
 		color: $color-inverse-text;
+		line-height: $height-teasers;
+		text-align: center;
+		font-size: floor(($font-size-h2 * 2));
+		@include transition(top 0.3s ease-in-out);
 	}
 
 	li > a:hover:after {
-		height: $height-full;
+		top: 0;
 	}
 
 }
+
+// --------------------MEDIA QUERIES-------------------
+
+@media screen and (min-width: 768px) {
+	#work {
+		.nav-pills > li {
+			display: inline-block;
+			margin-left: $margin-left-work-nav-pills;
+		}
+
+		.nav-pills > li {
+			float: none;
+
+			a {
+				border-top-width: 1px;
+			}
+
+		}
+
+	}
+
+}
+
+
+
 

@@ -1,8 +1,16 @@
 
+.modal-title {
+	text-transform: uppercase;
+}
+
 .modal-body {
 	padding: 0;
 
 	img {
 		width: $width-full;
 	}
+}
+
+.modal-footer {
+	text-align: left;
 }

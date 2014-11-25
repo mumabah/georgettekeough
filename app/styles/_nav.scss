@@ -28,6 +28,7 @@ header {
 		-moz-border-radius: 0;
 		border-radius: 0;
 		background-color: $color-primary;
+		border-width: 0;
 
 		.icon-bar {
 			background-color: $color-inverse-text;
@@ -74,7 +75,6 @@ header {
 
 }
 
-
 .navbar-collapse {
 	background-color: $gray-lighter;
 	@include box-shadow( 0 2px 3px 0px rgba(0, 0, 0, 0.2) );
@@ -85,11 +85,32 @@ header {
 
 }
 
+.navbar-brand {
+	height: $height-navbar-brand - 10;
+	padding-top: $padding-general / 4;
+	padding-bottom: $padding-general / 4;
+	padding-right: 0;
+	padding-left: 0;
+	height: $height-navbar-brand;
+	margin-left: 0;
+	display: inline-block;
+	margin-right: $padding-general - 5;
+	margin-left: $padding-general - 5;
+	width: $width-navbar-brand - 10;
 
+	img {
+		height: $height-navbar-brand - 10;
+	}
+}
 
 // --------------------MEDIA QUERIES-------------------
 
 @media screen and (min-width: 768px) {
+
+	.navbar-header {
+		width: $width-navbar-header;
+	}
+
 	.navbar-default {
 
 		.navbar-nav > li > a:hover,
@@ -108,6 +129,10 @@ header {
 		-moz-box-shadow: none;
 		box-shadow: none;
 
+	}
+
+	.navbar-brand {
+		width: $width-navbar-brand;
 	}
 
 }

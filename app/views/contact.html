@@ -4,8 +4,9 @@
 		<a href="mailto:info@georgettekeough.com">info@georgettekeough.com</a>
 	</p>
 	<form name="contactForm" role="form" ng-submit="submit(contactForm)" class="col-xs-12" action="" method="post" novalidate>
-		<p ng-show="success">Thanks for getting in touch!</p>
+		<p ng-show="success">Thanks for contacting me! I will get in touch with you shortly.</p>
     <p ng-show="error">Something wrong happened!, please try again.</p>
+    <p ng-class="result">{{ resultMessage }}</p>
 
 	  <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine, 'has-success': contactForm.name.$valid && !contactForm.name.$pristine, 'has-feedback': !contactForm.name.$pristine }">
 	    <label class="sr-only" for="name">NAME</label>
@@ -34,8 +35,6 @@
 	  <div class="form-group text-right">
 	  	<button type="submit" name="submit" value="submit" class="btn btn-lg btn-block btn-success" ng-disabled="contactForm.$invalid">Submit</button>
 	  </div>
-
-		<p ng-class="result">{{ resultMessage }}</p>
 
 	</form>
 	<!-- <aside class="col-xs-12 col-sm-4 contact-info">
