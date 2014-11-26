@@ -23,28 +23,28 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
     <main>
-
+      <!-- IF YOU ARE PAYING ATTENTION HERE IS MY NUMBER 407-810-9794 -->
       <header class="container">
         <section ng-include="'views/nav.html'"></section>
       </header>
 
+      <section id="wrapper">
 
-      <section id="jumbotron" class="container" ng-include="'views/jumbotron.html'"></section>
+        <section id="jumbotron" class="container" ng-include="'views/jumbotron.html'"></section>
 
-      <!-- Custom directive where profile lives -->
-      <profile></profile>
+        <profile></profile>
 
-      <!-- Custom directive where work lives -->
-      <work></work>
+        <work></work>
 
+        <skills></skills>
 
-      <skills></skills>
+        <section id="funfacts" ng-controller="funfactsCtrl" ng-include="'views/funfacts.html'"></section>
 
-      <section id="contact" class="container" ng-include="'views/contact.html'"></section>
+        <section id="contact" class="container" ng-include="'views/contact.html'"></section>
 
-      <footer class="footer container-fluid" ng-include="'views/footer.html'"></footer>
+        <footer class="footer container-fluid" ng-include="'views/footer.html'"></footer>
+      </section>
     </main>
 
 
@@ -106,6 +106,7 @@
         <script src="scripts/controllers/contact.js"></script>
         <script src="scripts/controllers/nav.js"></script>
         <script src="scripts/controllers/jumbotron.js"></script>
+        <script src="scripts/controllers/funfacts.js"></script>
 
         <script src="scripts/directives/profile.js"></script>
         <script src="scripts/directives/work.js"></script>

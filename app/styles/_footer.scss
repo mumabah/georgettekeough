@@ -6,3 +6,14 @@ footer.footer {
 	background-color: $color-primary;
 	margin-top: $padding-general;
 }
+
+.back-top {
+	position: fixed;
+	bottom: $padding-general;
+	right: $padding-general;
+
+	&:hover {
+		color: $color-primary;
+		background-color: $color-inverse-text !important;
+	}
+}

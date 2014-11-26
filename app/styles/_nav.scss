@@ -103,6 +103,49 @@ header {
 	}
 }
 
+
+
+// --------------------MOBILE MENU-------------------
+
+.mobile-menu {
+    background: $color-primary;
+    position: fixed;
+    width: $width-mobile-menu;
+    height: $height-full;
+    top: 0;
+    z-index: 1000;
+    left: -$width-mobile-menu;
+    @include transition(all 0.3s ease);
+
+    .navbar-nav > li > a {
+	    color: $color-inverse-text;
+
+	    &:hover {
+			    background: $color-back-navbar-header;
+			}
+		}
+
+		.navbar-nav > .active > a {
+			color: $color-primary;
+		}
+
+		.navbar-nav {
+			margin-left: 0;
+			width: $width-full;
+		}
+
+		&.mobile-menu-open {
+		    left: 0;
+		}
+
+}
+
+.mobile-menu-push-toright {
+    left: $width-mobile-menu;
+}
+
+
+
 // --------------------MEDIA QUERIES-------------------
 
 @media screen and (min-width: 768px) {
@@ -136,4 +179,7 @@ header {
 	}
 
 }
+
+
+
 

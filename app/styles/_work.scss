@@ -1,6 +1,15 @@
 
 #work {
 
+	h2 {
+		margin-bottom: $padding-general * 4;
+
+		span {
+			border-bottom: 3px solid $color-primary;
+			padding-bottom: $padding-general;
+		}
+	}
+
 	.filters {
 		margin-bottom: $padding-general * 2;
 	}
@@ -64,11 +73,11 @@
 		height: $height-full;
 		top: -($height-teasers);
 		left: 0;
-		background-color: rgba($color-primary, 0.5);
+		background-color: rgba($color-primary, 0.7);
 		color: $color-inverse-text;
 		line-height: $height-teasers;
 		text-align: center;
-		font-size: floor(($font-size-h2 * 2));
+		font-size: $font-size-h2 + 10;
 		@include transition(top 0.3s ease-in-out);
 	}
 

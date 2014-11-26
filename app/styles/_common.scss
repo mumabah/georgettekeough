@@ -22,22 +22,18 @@ h2 {
 	color: $gray-light;
 }
 
-h3, .h3 {
-
-}
-
 h4 {
 	line-height: 1.4;
 }
 
 h5 {
 	text-transform: uppercase;
+	color: $color-inverse-text;
 }
 
 h6 {
 	font-family: $font-sans-serif-general;
 	font-size: $font-size-large;
-	// text-transform: uppercase;
 	color: lighten($gray-light, 20%);
 	font-weight: 100;
 	margin-top: $padding-general;
@@ -75,6 +71,7 @@ a,
 
 a {
 	color: darken($gray-lighter, 20%);
+	word-wrap: break-word;
 
 	&:focus,
 	&:hover {
@@ -93,7 +90,6 @@ a {
 	border-radius: 0;
 	font-weight: 300;
 	letter-spacing: 1px;
-	// font-family: $font-condensed;
 }
 
 .btn-default {
@@ -115,10 +111,23 @@ a {
 	padding-top: $grid-gutter-width / 2;
 }
 
-main > section,
+main > section > * > section,
 main > * > section {
-	padding-top: $padding-general * 4;
-	padding-bottom: $padding-general * 4;
+	padding-top: $padding-general * 2;
+	padding-bottom: $padding-general * 2;
+}
+
+#work,
+#about,
+#skills,
+#contact,
+#funfacts {
+	opacity: 0;
+	@include transition(opacity 0.3s ease-in-out);
+
+	&.appear {
+		opacity: 1;
+	}
 }
 
 .list-inline {
@@ -131,19 +140,14 @@ main > * > section {
 
 }
 
-.back-top {
-	position: fixed;
-	bottom: $padding-general;
-	right: $padding-general;
-
-	&:hover {
-		color: $color-primary;
-		background-color: $color-inverse-text !important;
+// --------------------MEDIA QUERIES-------------------
+@media screen and (max-width: 768px) {
+	.spheres a.back-top {
+		width: $width-social-links / 2;
+		height: $height-social-links / 2;
+		line-height: ($height-social-links / 2) - 15;
 	}
 }
-
-
-// --------------------MEDIA QUERIES-------------------
 
 @media screen and (min-width: 768px) {
 
@@ -153,12 +157,11 @@ main > * > section {
 		font-size: $font-size-h2;
 	}
 
+	main > section > * > section > section,
+	main > * > section {
+		padding-top: $padding-general * 4;
+		padding-bottom: $padding-general * 4;
+	}
+
 }
 
-@media screen and (max-width: 768px) {
-	.spheres a.back-top {
-		width: $width-social-links / 2;
-		height: $height-social-links / 2;
-		line-height: ($height-social-links / 2) - 15;
-	}
-}
